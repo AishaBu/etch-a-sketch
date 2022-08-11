@@ -1,0 +1,68 @@
+*, *::before, *::after{
+    /*Resets everything to 0 universally*/
+       border: 0;
+       padding: 0;
+       margin: 0;  
+       box-sizing: border-box;
+       }
+
+
+ body, html{
+        overflow-x: hidden;
+        min-height: 100vh;
+        background-color: rgb(233, 233, 233);
+
+        display: flex;
+        flex-direction: column;
+    }
+
+
+#content{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#grid{
+    width: 960px;
+    height: 500px;
+    background-color: white;
+    display: grid;
+    margin-top: 80px; 
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.modes{
+  background-color: black;
+  color: white;
+  padding: 15px;
+  margin: 15px;
+}
+
+#updateGridSizeBtn{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    margin: 5px;
+}
+
+.modes:hover, #updateGridSizeBtn:hover{
+    background-color: rgb(122, 126, 126);
+}
+
+#userNumberInput{
+    width: 90px;
+    height: 20px;
+}
+
+#wrongInputResponse{
+    display: none;
+}
+
+footer{
+        background-color: rgb(75, 75, 75);
+        height: 100px;
+        margin-top: auto; /*pushes footer to bottom of page*/
+}
