@@ -33,6 +33,11 @@
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
+#gridSquare{
+    border: 0.02px solid rgb(22, 21, 21);
+    opacity: 80%;
+}
+
 
 .modes{
   background-color: black;
@@ -58,6 +63,11 @@
 }
 
 #wrongInputResponse{
+    display: none;
+}
+
+
+#colorPicker{
     display: none;
 }
 

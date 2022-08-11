@@ -4,7 +4,7 @@ let gridSize;
 /*Checks if input value is between 2
 and 100 and returns message if not*/
 function checkInputValue(){
-   
+
    /* less than 2 or greater than 100*/
     if (gridSize < 2 || gridSize > 100){
        
@@ -21,7 +21,7 @@ function checkInputValue(){
 
  /*Creates grid after user inputs grid size*/
 function createGrid(){
-
+  
         /*Creates grids*/
         let gridArea = gridSize * gridSize;
 
@@ -30,12 +30,10 @@ function createGrid(){
 
         for( i = 0; i < gridArea; i++){
             let gridSquare = document.createElement('div');
-            gridSquare.style.backgroundColor = 'white';
-            gridSquare.style.border = '0.2px solid gray';
-            grid.insertAdjacentElement('beforeend', gridSquare);   
+            gridSquare.setAttribute('id', 'gridSquare');
+            grid.insertAdjacentElement('beforeend', gridSquare);
         }
     }
-
 
 /*Clears current grid and updates grid size*/
 function updateGridSize(){
@@ -44,9 +42,30 @@ function updateGridSize(){
     checkInputValue();
 }
 
-
 /*Declare Event Listeners*/
 const updateGridSizeBtn = document.getElementById('updateGridSizeBtn');
+const colorModeBtn = document.getElementById('colorModeBtn');
+const colorPicker = document.getElementById('colorPicker');
+const colorPickerValue = document.getElementById('colorPicker').value;
 
 /*Call Event Listeners*/
-updateGridSizeBtn.addEventListener('click', updateGridSize);
+updateGridSizeBtn.addEventListener('click', updateGridSize); //update size of grid after grid change
+
+//Show color picker when color mode button is clicked
+colorModeBtn.addEventListener('click', () => {colorPicker.style.display = 'block';})
+
+//sets grid to color picker choice 
+colorPicker.addEventListener('input', () =>{
+
+    /*Mouse Over Event, When cursor scrolls over grid, 
+    will change color of squares to color picker choice*/
+    grid.addEventListener('mouseover',(event) => {
+        let colorChoice = document.getElementById('colorPicker').value;
+    event.target.style.backgroundColor = colorChoice;
+    })
+
+});
+
+//Hides color picker when if user dismisses color picker
+colorPicker.addEventListener('change', () => {colorPicker.style.display = 'none';})
+

@@ -15,16 +15,22 @@
     <main>
          <div id="content">
             <div id="grid"></div>
+
             <div id="buttons">
-                <button id="colorMode" class="modes">Color Mode</button>
-                <button id="rainbowMode" class="modes">Rainbow Mode</button>
+                <button id="colorModeBtn" class="modes">Color Mode
+                    <input type="color" id="colorPicker" name="color-picker">
+                </button>
+                
+                <button id="rainbowModeBtn" class="modes">Rainbow Mode</button>
                 <button id="eraserMode" class="modes">Eraser</button>
                 <button id="clearMode" class="modes">Clear</button>
             </div>
-            <label for="gridInputLabel">Pick a number between 2 and 100 for your grid size
+
+            <label for="gridInputLabelBtn">Pick a number between 2 and 100 for your grid size
                 <input type="number" id="userNumberInput">
                 <button id="updateGridSizeBtn">Update Grid Size</button>
             </label>
+
             <p id="wrongInputResponse">Pick a number between 2 and 100</p>
          </div> 
     </main>
