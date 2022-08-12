@@ -42,30 +42,67 @@ function updateGridSize(){
     checkInputValue();
 }
 
+/*Rainbow Color Grid*/
+function createRainbowGridColors(){
+   
+    grid.addEventListener('mouseover',(event) => {
+        const randomBetween = (min,max) => min + Math.floor(Math.random()*(max -min +1));
+        const red = randomBetween(0, 255);
+        const green = randomBetween(0, 255);
+        const blue = randomBetween(0, 255);
+        const rainbowColors = `rgb(${red}, ${blue}, ${green})`;
+
+        event.target.style.backgroundColor = rainbowColors;
+    })
+}
+
+/*Erase Grid Function*/
+function eraseGridSquare(){
+
+     /*Should clear specific square when clicked*/
+     grid.addEventListener('mouseover',(event) => {
+        event.target.style.backgroundColor = 'white';
+    })
+}
+
+
+/*Will show color picker choice on grid*/
+function pickColor(){
+    /*Mouse Over Event, When cursor scrolls over grid, 
+    will change color of squares to color picker choice*/
+    grid.addEventListener('mouseover',(event) => {
+        let colorChoice = document.getElementById('colorPicker').value;
+        event.target.style.backgroundColor = colorChoice;
+    })
+}
+
+/*Clear Entire Grid Function*/
+function clearEntireGrid(){
+        /*Should clear specific square when clicked*/
+     grid.childNodes.forEach((child) =>
+     child.style.backgroundColor = 'white'
+     )
+}
+
 /*Declare Event Listeners*/
 const updateGridSizeBtn = document.getElementById('updateGridSizeBtn');
 const colorModeBtn = document.getElementById('colorModeBtn');
 const colorPicker = document.getElementById('colorPicker');
 const colorPickerValue = document.getElementById('colorPicker').value;
+const rainbowModeBtn = document.getElementById('rainbowModeBtn');
+const eraserModeBtn = document.getElementById('eraserModeBtn');
+const clearGridModeBtn = document.getElementById('clearGridModeBtn');
 
 /*Call Event Listeners*/
 updateGridSizeBtn.addEventListener('click', updateGridSize); //update size of grid after grid change
+rainbowModeBtn.addEventListener('click', createRainbowGridColors);//will create grid divs with randomized colors
+eraserModeBtn.addEventListener('click', eraseGridSquare); //Erase specific grid square when clicked
+clearGridModeBtn.addEventListener('click', clearEntireGrid); //Clears entire grid when clicked
 
-//Show color picker when color mode button is clicked
-colorModeBtn.addEventListener('click', () => {colorPicker.style.display = 'block';})
 
-//sets grid to color picker choice 
-colorPicker.addEventListener('input', () =>{
+colorModeBtn.addEventListener('click', () => {colorPicker.style.display = 'block';});//Shows color picker when color mode button is clicked
+colorPicker.addEventListener('change', () => {colorPicker.style.display = 'none';}); //Hides color picker if user dismisses color picker
+colorPicker.addEventListener('input', pickColor); //sets grid to color picker choice 
 
-    /*Mouse Over Event, When cursor scrolls over grid, 
-    will change color of squares to color picker choice*/
-    grid.addEventListener('mouseover',(event) => {
-        let colorChoice = document.getElementById('colorPicker').value;
-    event.target.style.backgroundColor = colorChoice;
-    })
 
-});
-
-//Hides color picker when if user dismisses color picker
-colorPicker.addEventListener('change', () => {colorPicker.style.display = 'none';})
 
