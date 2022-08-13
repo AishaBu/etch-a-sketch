@@ -6,7 +6,6 @@ function defaultGrid(){
     gridSize = parseInt(16);
     checkInputValue();
 }
-
 defaultGrid();
 
 /*Checks if input value is between 2
@@ -25,7 +24,6 @@ function checkInputValue(){
         createGrid();
     }
 }
-
 
  /*Creates grid after user inputs grid size*/
 function createGrid(){
@@ -109,7 +107,6 @@ rainbowModeBtn.addEventListener('click', createRainbowGridColors);//will create 
 eraserModeBtn.addEventListener('click', eraseGridSquare); //Erase specific grid square when clicked
 clearGridModeBtn.addEventListener('click', clearEntireGrid); //Clears entire grid when clicked
 resetGridSizeBtn.addEventListener('click', defaultGrid); //set grid to default grid size when clicked
-
 
 colorModeBtn.addEventListener('click', () => {colorPicker.style.display = 'block';});//Shows color picker when color mode button is clicked
 colorPicker.addEventListener('change', () => {colorPicker.style.display = 'none';}); //Hides color picker if user dismisses color picker
