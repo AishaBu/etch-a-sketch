@@ -1,6 +1,14 @@
 const grid = document.getElementById('grid');
 let gridSize;
 
+function defaultGrid(){
+    grid.innerHTML = ''; //clears previous grid
+    gridSize = parseInt(16);
+    checkInputValue();
+}
+
+defaultGrid();
+
 /*Checks if input value is between 2
 and 100 and returns message if not*/
 function checkInputValue(){
@@ -38,7 +46,7 @@ function createGrid(){
 /*Clears current grid and updates grid size*/
 function updateGridSize(){
     gridSize = parseInt(document.getElementById('userNumberInput').value);
-    grid.innerHTML = ''; //clears previous 
+    grid.innerHTML = ''; //clears previous grid
     checkInputValue();
 }
 
@@ -68,11 +76,12 @@ function eraseGridSquare(){
 
 /*Will show color picker choice on grid*/
 function pickColor(){
+
     /*Mouse Over Event, When cursor scrolls over grid, 
     will change color of squares to color picker choice*/
-    grid.addEventListener('mouseover',(event) => {
         let colorChoice = document.getElementById('colorPicker').value;
-        event.target.style.backgroundColor = colorChoice;
+        grid.addEventListener('mouseover',(event) => {
+            event.target.style.backgroundColor = colorChoice;
     })
 }
 
@@ -92,12 +101,14 @@ const colorPickerValue = document.getElementById('colorPicker').value;
 const rainbowModeBtn = document.getElementById('rainbowModeBtn');
 const eraserModeBtn = document.getElementById('eraserModeBtn');
 const clearGridModeBtn = document.getElementById('clearGridModeBtn');
+const resetGridSizeBtn = document.getElementById('resetGridSizeBtn');
 
 /*Call Event Listeners*/
 updateGridSizeBtn.addEventListener('click', updateGridSize); //update size of grid after grid change
 rainbowModeBtn.addEventListener('click', createRainbowGridColors);//will create grid divs with randomized colors
 eraserModeBtn.addEventListener('click', eraseGridSquare); //Erase specific grid square when clicked
 clearGridModeBtn.addEventListener('click', clearEntireGrid); //Clears entire grid when clicked
+resetGridSizeBtn.addEventListener('click', defaultGrid); //set grid to default grid size when clicked
 
 
 colorModeBtn.addEventListener('click', () => {colorPicker.style.display = 'block';});//Shows color picker when color mode button is clicked
