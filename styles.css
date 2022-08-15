@@ -77,6 +77,8 @@
 
 #wrongInputResponse{
     display: none;
+    padding-top: 5px;
+    text-align: center;
 }
 
 
@@ -148,6 +150,11 @@ footer a:hover{
         margin: auto;
     }
 
+    #wrongInputResponse{
+       max-width:200px;
+       margin: auto;
+    }
+
 }
 
 /*Tablet Devices*/
@@ -165,6 +172,11 @@ footer a:hover{
         margin: auto;
         padding-top: 20px;
     }
+
+    #wrongInputResponse{
+        max-width:200px;
+        margin: auto;
+     }
 
     #colorPicker{
         margin-top: 5px;
