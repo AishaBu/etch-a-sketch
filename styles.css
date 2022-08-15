@@ -84,4 +84,27 @@ footer{
         background-color: rgb(75, 75, 75);
         height: 100px;
         margin-top: auto; /*pushes footer to bottom of page*/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+footer p {
+    color: rgb(229, 226, 226);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma,Verdana, sans-serif;
+}
+
+footer img{
+    background-color: white;
+    border-radius: 60%;
+    border: 1px solid white;
+    margin: 5px;
+}
+
+footer a:hover{
+    transition: transform 0.5s ease-in-out;
+    transform: rotate(360deg) scale(1.2);
+    border: 1px 1px black;
 }

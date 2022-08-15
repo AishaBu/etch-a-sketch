@@ -12,10 +12,10 @@ defaultGrid();
 and 100 and returns message if not*/
 function checkInputValue(){
 
-   /* less than 2 or greater than 100*/
-    if (gridSize < 2 || gridSize > 100){
-       
-        let wrongInputResponse = document.getElementById('wrongInputResponse');
+   /* less than 2 or greater than 100 or input value is not a number*/
+    if (gridSize < 2 || gridSize > 100 || isNaN(gridSize) ){
+        defaultGrid(); //shows default grid in no input value is entered;
+        let wrongInputResponse = document.getElementById('wrongInputResponse'); //shows message asking to input a number between 2 and 100.
         wrongInputResponse.style.display = 'block';
         wrongInputResponse.style.color = 'red';
     }
@@ -37,12 +37,13 @@ function createGrid(){
         for( i = 0; i < gridArea; i++){
             let gridSquare = document.createElement('div');
             gridSquare.setAttribute('id', 'gridSquare');
-            grid.insertAdjacentElement('beforeend', gridSquare);
+            grid.appendChild(gridSquare);
         }
     }
 
 /*Clears current grid and updates grid size*/
 function updateGridSize(){
+
     gridSize = parseInt(document.getElementById('userNumberInput').value);
     grid.innerHTML = ''; //clears previous grid
     checkInputValue();
@@ -77,10 +78,10 @@ function pickColor(){
 
     /*Mouse Over Event, When cursor scrolls over grid, 
     will change color of squares to color picker choice*/
-        let colorChoice = document.getElementById('colorPicker').value;
         grid.addEventListener('mouseover',(event) => {
-            event.target.style.backgroundColor = colorChoice;
-    })
+            let colorChoice = document.getElementById('colorPicker').value;
+            event.target.style.backgroundColor = colorChoice;           
+     })   
 }
 
 /*Clear Entire Grid Function*/
@@ -108,9 +109,7 @@ eraserModeBtn.addEventListener('click', eraseGridSquare); //Erase specific grid 
 clearGridModeBtn.addEventListener('click', clearEntireGrid); //Clears entire grid when clicked
 resetGridSizeBtn.addEventListener('click', defaultGrid); //set grid to default grid size when clicked
 
-colorModeBtn.addEventListener('click', () => {colorPicker.style.display = 'block';});//Shows color picker when color mode button is clicked
-colorPicker.addEventListener('change', () => {colorPicker.style.display = 'none';}); //Hides color picker if user dismisses color picker
+colorModeBtn.addEventListener('click', () => {colorPicker.style.display = 'block';});//Shows color picker when color mode button mouse is hover over
+window.addEventListener('mouseup', () => {colorPicker.style.display = 'none'}); //Hides color picker if user clicks outside of color picker
 colorPicker.addEventListener('input', pickColor); //sets grid to color picker choice 
-
-
 
