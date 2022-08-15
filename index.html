@@ -17,6 +17,7 @@
          <div id="content">
             <div id="grid"></div>
 
+        <div class="buttonsAndLabel">
             <div id="buttons">
                 <button id="colorModeBtn" class="modes">Color Mode
                     <input type="color" id="colorPicker" name="color-picker">
@@ -28,10 +29,12 @@
                 <button id="resetGridSizeBtn" class="modes">Reset Grid to Default Size (16px)</button>
             </div>
 
-            <label for="gridInputLabelBtn">Pick a number between 2 and 100 for your grid size
+        <div id="inputAndButton">
+            <label for="gridInputLabelBtn"><p id="inputLabelText">Pick a number between 2 and 100 for your grid size</p>
                 <input type="number" id="userNumberInput">
                 <button id="updateGridSizeBtn">Update Grid Size</button>
             </label>
+        </div>
 
             <p id="wrongInputResponse">Pick a number between 2 and 100 to change the grid size</p>
          </div> 

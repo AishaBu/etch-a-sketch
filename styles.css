@@ -66,6 +66,10 @@
     background-color: rgb(122, 126, 126);
 }
 
+#inputAndButton{
+    text-align: center;
+}
+
 #userNumberInput{
     width: 90px;
     height: 20px;
@@ -107,4 +111,155 @@ footer a:hover{
     transition: transform 0.5s ease-in-out;
     transform: rotate(360deg) scale(1.2);
     border: 1px 1px black;
+}
+
+
+
+/*MEDIA QUERIES*/
+
+
+/*Mobile Devices*/
+/*460px and less*/
+@media(max-width: 450px){
+
+   .buttonsAndLabel{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #grid{
+        width: 360px;
+        height: 400px;
+    }
+
+    #buttons{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #inputLabelText{
+        max-width: 170px;
+        margin: auto;
+        padding-top: 20px;
+    }
+
+    #colorPicker{
+        margin-top: 5px;
+        margin: auto;
+    }
+
+}
+
+/*Tablet Devices*/
+/*No less than 451 and no greater than 580px */
+@media(min-width: 451px) and (max-width:580px){
+
+    .buttonsAndLabel{
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #inputLabelText{
+        max-width: 170px;
+        margin: auto;
+        padding-top: 20px;
+    }
+
+    #colorPicker{
+        margin-top: 5px;
+        margin: auto;
+    }
+
+
+    #grid{
+        width: 430px;
+        height: 400px;
+    }
+
+    #buttons{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+@media(min-width: 581px) and (max-width:700px){
+
+    #grid{
+        width: 560px;
+        height: 400px;
+    }
+
+    #buttons{
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 10px;
+    }
+    
+
+    .buttonsAndLabel{
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #inputLabelText{
+        margin: auto;
+        padding-top: 20px;
+    }
+
+    #colorPicker{
+        margin-top: 5px;
+        margin: auto;
+    }
+}
+
+
+
+@media(min-width: 701px) and (max-width:1001px){
+
+    #grid{
+        width: 660px;
+        height: 400px;
+    }
+
+    #buttons{
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 10px;
+    }
+
+
+    .buttonsAndLabel{
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #inputLabelText{
+        margin: auto;
+        padding-top: 20px;
+    }
+
+    #colorPicker{
+        margin-top: 5px;
+        margin: auto;
+    }
+
+}
+
+/*Surface Pro 7*/
+@media(width: 912px){
+
+    #grid{
+        width: 860px;
+        height: 600px;
+    }
+
+    .buttonsAndLabel{
+        padding-top: 40px;
+    }
 }
