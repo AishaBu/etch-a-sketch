@@ -27,7 +27,7 @@ While creating this game, I practiced DOM manipulation using JavaScript to chang
 
 #### Tablet Devices
 <table>
-    <tr><td><img src="./eas-images/eas-readme-tabletone.png" height = 1000></td></tr>
+    <tr><td><img src="./eas-images/eas-readme-tabletone.png" height = 1000 width = auto></td></tr>
 </table>
 
 ### Live Site
