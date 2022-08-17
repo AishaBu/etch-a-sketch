@@ -31,7 +31,7 @@ While creating this game, I practiced DOM manipulation using JavaScript to chang
 </table>
 
 ### Live Site
-[Rock, Paper, Scissors Game](https://aishabu.github.io/rock-paper-scissors/)
+[Etch A Sketch Game]( https://aishabu.github.io/etch-a-sketch/)
 
 ### Built With 
 HTML <br>
