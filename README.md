@@ -25,9 +25,9 @@ While creating this game, I practiced DOM manipulation using JavaScript to chang
      </tr>
 </table>
 
-####  Devices
+#### Tablet Devices
 <table>
-    <tr><td><img src="./eas-images/eas-readme-tabletone.png"></td></tr>
+    <tr><td><img src="./eas-images/eas-readme-tabletone.png" height = 1100></td></tr>
 </table>
 
 ### Live Site
