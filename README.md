@@ -7,8 +7,7 @@
 </table>
 
 ### Description
-This Etch-A-Sketch game was made for the Etch-A-Sketch assigment in the Odin Project. The assignment was to make an etch-a-sketch game using HTML, CSS, and JavaScript.
-While creating this game, I practiced DOM manipulation using JavaScript to change the color of text, to create elements and attributes, and to recieve  user input values. I also learned how to use mouse events and event listeners to make the grid change colors as the mouse hovers over the grid squares, and to implement the users input of a color choice. I also made more use of arrow functions, and learned to use embedded variables in string literals to make the user's number input appear on the grid. 
+This Etch-A-Sketch game was made for the Etch-A-Sketch assigment in the Odin Project. The assignment was to make an etch-a-sketch game using HTML, CSS, and JavaScript. The game is fully responsive for desktop, tablet and mobile devices. While creating this game, I practiced DOM manipulation using JavaScript to change the color of text, to create elements and attributes, and to recieve  user input values. I also learned how to use mouse events with event listeners to make the grid change colors as the mouse hovers over the grid squares, and to implement the users input of a color choice. I also made more use of arrow functions, and learned to use embedded variables in string literals to make the user's number input appear on the grid. 
 
 
 #### Desktop Devices
