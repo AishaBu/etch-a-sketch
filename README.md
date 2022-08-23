@@ -13,7 +13,7 @@ This Etch-A-Sketch game was made for the Etch-A-Sketch assigment in the Odin Pro
 <ol>
 <li><b>To Activate Grid Color & Hover Effect: </b> Click once and move mouse in either direction to activate color.</li>
 <br>
-<li><b>To Pause Hover Effect: </b> While holding mouse button down, move mouse up or down, <br> wait for hands curser to appear, move the mouse without activating the hover effect.</li>
+<li><b>To Pause Hover Effect: </b> While holding mouse button down, move mouse up or down, wait for hands curser to appear, move the mouse without activating the hover effect.</li>
 <br>
 <li><b>To Erase: </b> Double click on square to erase.</li>
 </ol>
