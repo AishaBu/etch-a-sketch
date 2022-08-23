@@ -5,9 +5,13 @@ function defaultGrid(){
     grid.innerHTML = ''; //clears previous grid
     gridSize = parseInt(16);
     
-    grid.addEventListener('mousedown', (event) => {
-         event.target.style.backgroundColor = 'black'; 
+    grid.addEventListener('mousedown', () => {
+         
+        grid.addEventListener('mouseover', (event) => {
+            event.target.style.backgroundColor = 'black'; 
     })
+           
+})
         
     grid.style.backgroundColor = 'white';
     createGrid();
@@ -60,7 +64,9 @@ function updateGridSize(){
 /*Rainbow Color Grid*/
 function createRainbowGridColors(){
 
-     grid.addEventListener('mousedown', (event) => {
+     grid.addEventListener('mousedown', () => {
+
+        grid.addEventListener('mouseover', (event) => {
 
             const randomBetween = (min,max) => min + Math.floor(Math.random()*(max -min +1));
             const red = randomBetween(0, 255);
@@ -69,7 +75,11 @@ function createRainbowGridColors(){
             const rainbowColors = `rgb(${red}, ${blue}, ${green})`;
 
             event.target.style.backgroundColor = rainbowColors;
+
         })
+
+          
+    })
 }
 
 
@@ -78,11 +88,14 @@ function pickColor(){
    
     /*Mouse Over Event, When cursor scrolls over grid, 
     will change color of squares to color picker choice*/
-        grid.addEventListener('mousedown',(event) => {
+        grid.addEventListener('mousedown',() => {
+           
+            grid.addEventListener('mouseover',(event) => {
            
                 let colorChoice = document.getElementById('colorPicker').value;
                 event.target.style.backgroundColor = colorChoice;  
-        })  
+        })
+    })  
 }
 
 /*Clear Entire Grid Function*/
@@ -99,9 +112,15 @@ function clearEntireGrid(){
 /*Erase Specific Square in Grid Function*/
 function eraseGridSquare(){
     /*Should clear specific square when clicked*/
-    grid.addEventListener('dblclick', (event) =>{
+
+    grid.addEventListener('mouseover', (event) =>{
         event.target.style.backgroundColor = 'white'
+
+        grid.addEventListener('dblclick', (event) =>{
+            event.target.style.backgroundColor = 'white'
+        })
     })
+
 }
 
 
